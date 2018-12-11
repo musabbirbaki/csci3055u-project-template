@@ -7,12 +7,12 @@
 
 > _Description on language_
 >
-> - History:
+> - _History:_
 > - Kotlin is introduced by JetBrains, the designers of Intellij IDEA
 > - First appeared in July of 2011
 > - Named after Kotlin Island, near St. Petersburg
 
-> - Some interesting features:
+> - _Some interesting features:_
 > - High level Strongly Statically typed language that runs on JVM
 > - Kotlin is functional and expressive language
 > - Can be defined as: Kotlin = JAVA + new features, though not necessarily a replacement for JAVA.
