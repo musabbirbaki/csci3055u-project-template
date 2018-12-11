@@ -58,5 +58,66 @@ community written in the language._
 
 # Analysis of the language
 
-> _Organize your report according to the project description
-document_.
+1. The style of programming supported by the language: functional vs procedural programming
+
+Kotlin supports both functional and procedual programming
+
+Example, this function just prints out the frequency of each string:
+```
+val testList: List<String> = listOf("a","b","c","a","c","c")
+
+println(frequency(testList))
+
+println(frequencyFunctional(testList))
+```
+
+Functional Example:
+```
+fun frequencyFunctional(listString: List<String>): List<Pair<String, Int>>{
+    return listString.groupBy { it }.map { Pair(it.key, it.value.count()) }
+}
+```
+
+Procedural Example:
+```
+fun frequency(listString: List<String>): HashMap<String, Int> {
+    var counter = 0
+    val results = hashMapOf<String, Int>()
+
+    while (counter < listString.size){
+        val element = results[listString[counter]]
+
+        if(element != null){
+            results[listString[counter]] = element + 1
+        }else{
+            results[listString[counter]] = 1
+        }
+        counter++
+    }
+    return results
+}
+```
+
+2. The ability to perform meta-programming such as macros
+
+Meta
+
+3. Symbol resolution and its support for closure
+
+asdf
+
+4. Scoping rules supported by the language: lexical vs dynamic scoping
+
+asdfa
+
+5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
+
+asdf
+
+6. Its type system: static vs dynamic types
+
+sdf
+
+7. Strengths and weaknesses of the language
+
+sdf
