@@ -128,8 +128,36 @@ val someVal: Int = 1 + run{if(1 > 2) 3 else 5 }
 
 ## About open source library
 
-> _Describe at least one contribution by the open source
-community written in the language._
+Kotlin has many Open Source libraries, an example would be Koi. Koi has many extensions and functions that helps reduce boilerplate code in Android apps.
+
+*Example File Read and Write*
+
+```scala
+fun fileReadWrite() {
+    val directory = File("/Users/koi/workspace")
+    val file = File("some.txt")
+
+    val text1 = file.readText()
+    val text2 = file.readString(Encoding.CHARSET_UTF_8)
+    val list1 = file.readList()
+    val list2 = file.readLines(Encoding.CHARSET_UTF_8)
+
+    file.writeText("hello, world")
+    file.writeList(list1)
+    file.writeList(list2, Encoding.CHARSET_UTF_8)
+
+    val v1 = file.relativeToOrNull(directory)
+    val v2 = file.toRelativeString(directory)
+
+    // clean files in directory
+    directory.clean()
+
+
+    val file1 = File("a.txt")
+    val file2 = File("b.txt")
+    file1.copyTo(file2, overwrite = false)
+}
+```
 
 # Analysis of the language
 
