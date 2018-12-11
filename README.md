@@ -135,9 +135,9 @@ community written in the language._
 
 1. The style of programming supported by the language: functional vs procedural programming
 
-Kotlin supports both functional and procedual programming
+> Kotlin supports both functional and procedual programming
 
-Example, this function just prints out the frequency of each string:
+> Example, this function just prints out the frequency of each string:
 ```java
 val testList: List<String> = listOf("a","b","c","a","c","c")
 
@@ -146,14 +146,14 @@ println(frequency(testList))
 println(frequencyFunctional(testList))
 ```
 
-Functional Example:
+> Functional Example:
 ```java
 fun frequencyFunctional(listString: List<String>): List<Pair<String, Int>>{
     return listString.groupBy { it }.map { Pair(it.key, it.value.count()) }
 }
 ```
 
-Procedural Example:
+> Procedural Example:
 ```java
 fun frequency(listString: List<String>): HashMap<String, Int> {
     var counter = 0
@@ -181,9 +181,9 @@ Output:
 
 2. The ability to perform meta-programming such as macros
 
-Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
+> Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
 
-Example Code:
+> Example Code:
 
 ```java
 open class Person(val name: String, var age: Int)
@@ -202,7 +202,7 @@ private fun printTypeHierarchy(cls: Class<out Any>?) {
     }
 }
 ```
-This uses the JAVA reflection API
+> This uses the JAVA reflection API
 ```java
 Output:
 Student
@@ -210,25 +210,44 @@ Person
 java.lang.Object
 ```
 
-This piece of code was written by Ruwanka De Silva, it can be found in:
-https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
+> This piece of code was written by Ruwanka De Silva, it can be found in:
+> https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
 
 
 3. Symbol resolution and its support for closure
 
-asdf
+> asdf
 
 4. Scoping rules supported by the language: lexical vs dynamic scoping
 
-asdfa
+> - Kotlin supports both lexical and dynamic scoping:
+> Example:
+```java
+run{
+  val x = 1
+  val y = "y"
+
+  run{
+    val x = 2
+    println("$x and $y")
+  }
+
+  println(x)
+}
+
+Output:
+2 and y
+1
+```
+> In the example above, the variable x is different in each scope while the variable y can still be accessed inside the inner scope like a dynamic variable.
 
 5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
 
-asdf
+> asdf
 
 6. Its type system: static vs dynamic types
 
-Kotline allows both
+> Kotline allows both
 
 7. Strengths and weaknesses of the language
 
