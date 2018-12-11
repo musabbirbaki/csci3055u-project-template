@@ -98,9 +98,48 @@ fun frequency(listString: List<String>): HashMap<String, Int> {
 }
 ```
 
+```
+Output:
+{a=2, b=1, c=3}
+[(a, 2), (b, 1), (c, 3)]
+```
+
 2. The ability to perform meta-programming such as macros
 
-Meta
+Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
+
+Example Code:
+```
+open class Person(val name: String, var age: Int)
+
+class Student(name: String, age: Int, var school: String) : Person(name, age)
+
+fun main(args: Array<String>) {
+    printTypeHierarchy(Student::class.java)
+}
+
+/**
+ * print type hierarchy of java class
+ */
+private fun printTypeHierarchy(cls: Class<out Any>?) {
+    var clazz = cls;
+    while (clazz != null) {
+        println(clazz.name)
+        clazz = clazz.superclass as Class<out Any>?
+    }
+}
+```
+This uses the JAVA reflection API
+```
+Output:
+Student
+Person
+java.lang.Object
+```
+
+This piece of code was written by Ruwanka De Silva, it can be found in:
+https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
+
 
 3. Symbol resolution and its support for closure
 
