@@ -370,7 +370,7 @@ highOrder {it + 1}
 
 #### 6. Its type system: static vs dynamic types
 
-Unlike Java, Kotlin does not have support for Static functions.
+Unlike Java, Kotlin does not have support for Static functions. Kotlin is also *Statically Typed*.
 
 Kotlin supports Mutable and Immutable variables.
 
@@ -388,6 +388,16 @@ Kolin supports constants similar to Java
 ```kotlin
 const val FOO = "foo"
 ```
+
+*Example 3:*
+
+```kotlin
+val num: Int by lazy {
+        503
+}
+```
+
+In Example 3, the variable *num* is not initialized until it is called for the first time. This lazy initialization is thread safe, and it doesn't use any memory until its first call.
 
 #### 7. Strengths and weaknesses of the language
 
