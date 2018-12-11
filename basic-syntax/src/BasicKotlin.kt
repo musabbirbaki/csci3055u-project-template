@@ -8,7 +8,7 @@ fun main(arg : Array<String>){
 
     println("NEW STUFF")
     val testList: List<String> = listOf("a","b","c","a","c","c")
-    
+
 
 }
 

@@ -159,4 +159,11 @@ sdf
 
 7. Strengths and weaknesses of the language
 
-sdf
+> - Pros:
+>     - New Programming Language: Kotlin is fairly new, it has been growing in support and user in a really fast pace.
+>     - Runtime and Performance: Since it uses the JVM, its runtime and Performance is at least as good as Java
+>     - Functional: Kotlin is easy to learn, and has very easy to read code.
+>     - Integration: Kotlin can be easily integrated with JavaScript and JAVA.
+> - Cons:
+>     - No Static Declaration: Kotlin doesn't support static handling modifiers like Java.
+>     - Name space Declaration: Kotlin allows function declaration at the top-level. However, declaring same functions later on may prove some difficulty in understanding the code.
