@@ -5,10 +5,26 @@
 
 ## About the language
 
-> _Describe the language_
+> _Description on language_
 >
-> - History
-> - Some interesting features
+> - History:
+- Kotlin is introduced by JetBrains, the designers of Intellij IDEA
+- First appeared in July of 2011
+- Named after Kotlin Island, near St. Petersburg
+
+> - Some interesting features:
+- High level Strongly Statically typed language that runs on JVM
+- Kotlin is functional and expressive language
+- Can be defined as: Kotlin = JAVA + new features, though not necessarily a replacement for JAVA.
+- It reduces lots of boiler plate code
+- Kotlin relies on existing Java Class library
+- Provides code safety like null safety
+- Good for server side coding
+- Don't need ; at the end of a line like Java
+- Java commands can be used in Kotlin
+- Kotlin can also be comiled to JavaScript codes
+- Kotlin is fully supported by Google for Android OS
+
 
 ## About the syntax
 
@@ -24,7 +40,15 @@
 
 ## About the tools
 
-> _Describe the compiler or interpreter needed_.
+> _Description of the compiler or interpreter needed_:
+- Kotlin runs on JVM, so it requires atleast the installation of JDK 8. After
+either Eclipse, Android studio, or Intellij can be used as an IDE to compile
+and run Kotlin projects.
+- Alternatively, Kotlin compiler can be installed and run directly from the
+command line.
+- When targeting JavaScript, Kotlin compiler will convert the .kt file into ES5.1
+and generates compatible code for JS.
+- When targeting JAVA, Kotlin compiler creates JVM compatible byte code
 
 ## About the standard library
 
