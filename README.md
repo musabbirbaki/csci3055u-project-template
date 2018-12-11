@@ -1,7 +1,7 @@
-# _Your project title_
+# KOTLIN
 
-- _your name_
-- _your email (uoit.net)_
+- Musabbir Ahmed Baki
+- musabbir.baki@uoit.net
 
 ## About the language
 
@@ -40,5 +40,3 @@ community written in the language._
 
 > _Organize your report according to the project description
 document_.
-
-
