@@ -4,15 +4,7 @@ fun main(arg : Array<String>){
     //printing hello world
     println("Hello, World!")
 
-    //variables()
-
-//    run{
-//        run{
-//            val x = 2
-//            println("$x and $y")
-//        }
-//        println(x)
-//    }
+    variables()
 }
 
 fun variables(){
