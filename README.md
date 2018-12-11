@@ -40,7 +40,7 @@ val a: Int = 10000
 val a = "10000"
 ```
 
-*If statment*
+*If statement*
 
 ```java
 val i: Int = 2
@@ -58,12 +58,44 @@ val items = listOf(1,2,3,4,5,6,7,7) //initialized before
 for(i in items) println(i)
 ```
 
-*For loop*
+*While loop*
 
 ```java
-val items = listOf(1,2,3,4,5,6,7,7) initialized before
-for(i in items) println(i)
+z = 0
+while(z <= 10){
+    println(z)
+    z++
+}
 ```
+
+*Functional Programming Syntax example*
+
+```java
+val items = listOf(1,2,3,4,5,6,7,7)
+println(items.filter { it % 2 == 1 }) //this prints only the Odd numbers
+```
+
+*Function/Method*
+
+```java
+fun sum(x: Int, y:Int):Int{
+    return = x + y
+}
+```
+
+*Function Shortened*
+
+```java
+fun sum(x: Int, y:Int) = x + y
+```
+
+*Class Declaration*
+
+```java
+class Car
+```
+
+For more Snippets of Code and Syntax, please refer to the "basic-syntax" folder.
 
 
 ## About the tools
@@ -147,9 +179,6 @@ fun main(args: Array<String>) {
     printTypeHierarchy(Student::class.java)
 }
 
-/**
- * print type hierarchy of java class
- */
 private fun printTypeHierarchy(cls: Class<out Any>?) {
     var clazz = cls;
     while (clazz != null) {
