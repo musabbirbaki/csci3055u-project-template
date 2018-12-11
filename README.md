@@ -28,15 +28,43 @@
 
 ## About the syntax
 
-> _give some code snippet of the language_
+*Declaring Integer*
 
-*Let form*
-
-```clojure
-(let [x 10
-      y 20]
-  (+ x y))
+```java
+val a: Int = 10000
 ```
+
+*Auto Type Declaration*
+
+```java
+val a = "10000"
+```
+
+*If statment*
+
+```java
+val i: Int = 2
+if (i in 1..10){
+    println("$i is in 1..10")
+}else{
+    println("$i isn't in the range")
+}
+```
+
+*For loop*
+
+```java
+val items = listOf(1,2,3,4,5,6,7,7) //initialized before
+for(i in items) println(i)
+```
+
+*For loop*
+
+```java
+val items = listOf(1,2,3,4,5,6,7,7) initialized before
+for(i in items) println(i)
+```
+
 
 ## About the tools
 
@@ -63,7 +91,7 @@ community written in the language._
 Kotlin supports both functional and procedual programming
 
 Example, this function just prints out the frequency of each string:
-```
+```java
 val testList: List<String> = listOf("a","b","c","a","c","c")
 
 println(frequency(testList))
@@ -72,14 +100,14 @@ println(frequencyFunctional(testList))
 ```
 
 Functional Example:
-```
+```java
 fun frequencyFunctional(listString: List<String>): List<Pair<String, Int>>{
     return listString.groupBy { it }.map { Pair(it.key, it.value.count()) }
 }
 ```
 
 Procedural Example:
-```
+```java
 fun frequency(listString: List<String>): HashMap<String, Int> {
     var counter = 0
     val results = hashMapOf<String, Int>()
@@ -98,7 +126,7 @@ fun frequency(listString: List<String>): HashMap<String, Int> {
 }
 ```
 
-```
+```java
 Output:
 {a=2, b=1, c=3}
 [(a, 2), (b, 1), (c, 3)]
@@ -109,7 +137,8 @@ Output:
 Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
 
 Example Code:
-```
+
+```java
 open class Person(val name: String, var age: Int)
 
 class Student(name: String, age: Int, var school: String) : Person(name, age)
@@ -130,7 +159,7 @@ private fun printTypeHierarchy(cls: Class<out Any>?) {
 }
 ```
 This uses the JAVA reflection API
-```
+```java
 Output:
 Student
 Person
@@ -155,7 +184,7 @@ asdf
 
 6. Its type system: static vs dynamic types
 
-sdf
+Kotline allows both
 
 7. Strengths and weaknesses of the language
 

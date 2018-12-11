@@ -5,11 +5,6 @@ fun main(arg : Array<String>){
     println("Hello, World!")
 
     variables()
-
-    println("NEW STUFF")
-    val testList: List<String> = listOf("a","b","c","a","c","c")
-
-
 }
 
 fun variables(){
@@ -130,3 +125,15 @@ fun variables(){
 fun doubling(x:Int):Int{
     return 2*x
 }
+
+//More Syntax
+class Customer//class syntax
+
+fun printMessage(value: String): Unit{//unit is an object (Almost like void in Java), Assumed Unit if nothing there.
+    println("$value")
+}
+
+fun sum(x: Int, y:Int) = x + y
+
+infix fun String.isSameAs(value: String) = this == value
+//can run this by running: "me" isSameAs "me"
