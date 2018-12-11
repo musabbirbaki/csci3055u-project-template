@@ -30,19 +30,19 @@
 
 *Declaring Integer*
 
-```java
+```kotlin
 val a: Int = 10000
 ```
 
 *Auto Type Declaration*
 
-```java
+```kotlin
 val a = "10000"
 ```
 
 *If statement*
 
-```java
+```kotlin
 val i: Int = 2
 if (i in 1..10){
     println("$i is in 1..10")
@@ -53,14 +53,14 @@ if (i in 1..10){
 
 *For loop*
 
-```java
+```kotlin
 val items = listOf(1,2,3,4,5,6,7,7) //initialized before
 for(i in items) println(i)
 ```
 
 *While loop*
 
-```java
+```kotlin
 z = 0
 while(z <= 10){
     println(z)
@@ -70,14 +70,14 @@ while(z <= 10){
 
 *Functional Programming Syntax example*
 
-```java
+```kotlin
 val items = listOf(1,2,3,4,5,6,7,7)
 println(items.filter { it % 2 == 1 }) //this prints only the Odd numbers
 ```
 
 *Function/Method*
 
-```java
+```kotlin
 fun sum(x: Int, y:Int):Int{
     return = x + y
 }
@@ -85,13 +85,13 @@ fun sum(x: Int, y:Int):Int{
 
 *Function Shortened*
 
-```java
+```kotlin
 fun sum(x: Int, y:Int) = x + y
 ```
 
 *Class Declaration*
 
-```java
+```kotlin
 class Car
 ```
 
@@ -109,20 +109,23 @@ For more Snippets of Code and Syntax, please refer to the "basic-syntax" folder.
 ## About the standard library
 
 *Kotlin has its standard library imported by Default. The Default Imports include:*
-```java
+
+```kotlin
 kotlin.*
 kotlin.collections.*
 java.lang.* (JVM only)
 //And many more.
 ```
 *Example 1: The Hello World program uses two of these libraries, the kotlin.io and kotlin collections*
-```java
+
+```kotlin
 fun main(arg : Array<String>){
     println("Hello, World!")
 }
 ```
 *Example 2: Higher-order functions, (let, apply, use, run, etc)*
-```java
+
+```kotlin
 val someVal: Int = 1 + run{if(1 > 2) 3 else 5 }
 ```
 
@@ -132,7 +135,7 @@ Kotlin has many Open Source libraries, an example would be Koi. Koi has many ext
 
 *Example File Read and Write*
 
-```scala
+```kotlin
 fun fileReadWrite() {
     val directory = File("/Users/koi/workspace")
     val file = File("some.txt")
@@ -166,7 +169,8 @@ fun fileReadWrite() {
 Kotlin supports both functional and procedual programming
 
 *Example, this function just prints out the frequency of each string:*
-```java
+
+```kotlin
 val testList: List<String> = listOf("a","b","c","a","c","c")
 
 println(frequency(testList))
@@ -175,14 +179,16 @@ println(frequencyFunctional(testList))
 ```
 
 *Functional Example:*
-```java
+
+```kotlin
 fun frequencyFunctional(listString: List<String>): List<Pair<String, Int>>{
     return listString.groupBy { it }.map { Pair(it.key, it.value.count()) }
 }
 ```
 
 *Procedural Example:*
-```java
+
+```kotlin
 fun frequency(listString: List<String>): HashMap<String, Int> {
     var counter = 0
     val results = hashMapOf<String, Int>()
@@ -201,7 +207,7 @@ fun frequency(listString: List<String>): HashMap<String, Int> {
 }
 ```
 
-```java
+```kotlin
 Output:
 {a=2, b=1, c=3}
 [(a, 2), (b, 1), (c, 3)]
@@ -213,7 +219,7 @@ Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capabili
 
 *Example Code:*
 
-```java
+```kotlin
 open class Person(val name: String, var age: Int)
 
 class Student(name: String, age: Int, var school: String) : Person(name, age)
@@ -230,8 +236,10 @@ private fun printTypeHierarchy(cls: Class<out Any>?) {
     }
 }
 ```
+
 *This uses the JAVA reflection API*
-```java
+
+```kotlin
 Output:
 Student
 Person
@@ -252,6 +260,7 @@ asdf
 Kotlin supports both lexical and dynamic scoping.
 
 *Example:*
+
 ```kotlin
 run{
   val x = 1
