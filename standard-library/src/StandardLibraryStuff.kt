@@ -43,5 +43,15 @@ fun main(args: Array<String>){
         println("--" + j) //prints from inclusive 1 to inclusive 4
     //println(j) this will give error
 
-    
+
+    //With is a functional function that runs a piece of code with a param
+    val i = 2
+    with(i) {
+        val numbers = 1..100
+
+        //filter filters the iterable
+        numbers.filter { it % 12 == 0 }
+                .map { it * 20 }
+                .forEach{println(it * i)}
+    }
 }
