@@ -108,8 +108,23 @@ For more Snippets of Code and Syntax, please refer to the "basic-syntax" folder.
 
 ## About the standard library
 
-> _Give some examples of the functions and data structures
-> offered by the standard library_.
+> - Kotlin has its standard library imported by Default. The Default Imports include:
+```java
+kotlin.*
+kotlin.collections.*
+java.lang.* (JVM only)
+//And many more.
+```
+> Example 1: The Hello World program uses two of these libraries, the kotlin.io and kotlin collections
+```java
+fun main(arg : Array<String>){
+    println("Hello, World!")
+}
+```
+> Example 2: Higher-order functions, (let, apply, use, run, etc)
+```java
+val someVal: Int = 1 + run{if(1 > 2) 3 else 5 }
+```
 
 ## About open source library
 
