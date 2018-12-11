@@ -108,20 +108,20 @@ For more Snippets of Code and Syntax, please refer to the "basic-syntax" folder.
 
 ## About the standard library
 
-> - Kotlin has its standard library imported by Default. The Default Imports include:
+*Kotlin has its standard library imported by Default. The Default Imports include:*
 ```java
 kotlin.*
 kotlin.collections.*
 java.lang.* (JVM only)
 //And many more.
 ```
-> Example 1: The Hello World program uses two of these libraries, the kotlin.io and kotlin collections
+*Example 1: The Hello World program uses two of these libraries, the kotlin.io and kotlin collections*
 ```java
 fun main(arg : Array<String>){
     println("Hello, World!")
 }
 ```
-> Example 2: Higher-order functions, (let, apply, use, run, etc)
+*Example 2: Higher-order functions, (let, apply, use, run, etc)*
 ```java
 val someVal: Int = 1 + run{if(1 > 2) 3 else 5 }
 ```
@@ -133,11 +133,11 @@ community written in the language._
 
 # Analysis of the language
 
-1. The style of programming supported by the language: functional vs procedural programming
+##### 1. The style of programming supported by the language: functional vs procedural programming
 
-> Kotlin supports both functional and procedual programming
+Kotlin supports both functional and procedual programming
 
-> Example, this function just prints out the frequency of each string:
+*Example, this function just prints out the frequency of each string:*
 ```java
 val testList: List<String> = listOf("a","b","c","a","c","c")
 
@@ -146,14 +146,14 @@ println(frequency(testList))
 println(frequencyFunctional(testList))
 ```
 
-> Functional Example:
+*Functional Example:*
 ```java
 fun frequencyFunctional(listString: List<String>): List<Pair<String, Int>>{
     return listString.groupBy { it }.map { Pair(it.key, it.value.count()) }
 }
 ```
 
-> Procedural Example:
+*Procedural Example:*
 ```java
 fun frequency(listString: List<String>): HashMap<String, Int> {
     var counter = 0
@@ -179,11 +179,11 @@ Output:
 [(a, 2), (b, 1), (c, 3)]
 ```
 
-2. The ability to perform meta-programming such as macros
+##### 2. The ability to perform meta-programming such as macros
 
-> Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
+Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
 
-> Example Code:
+*Example Code:*
 
 ```java
 open class Person(val name: String, var age: Int)
@@ -202,7 +202,7 @@ private fun printTypeHierarchy(cls: Class<out Any>?) {
     }
 }
 ```
-> This uses the JAVA reflection API
+*This uses the JAVA reflection API*
 ```java
 Output:
 Student
@@ -210,18 +210,20 @@ Person
 java.lang.Object
 ```
 
-> This piece of code was written by Ruwanka De Silva, it can be found in:
-> https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
+*This piece of code was written by Ruwanka De Silva, it can be found in:*
+
+https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
 
 
-3. Symbol resolution and its support for closure
+##### 3. Symbol resolution and its support for closure
 
-> asdf
+asdf
 
-4. Scoping rules supported by the language: lexical vs dynamic scoping
+##### 4. Scoping rules supported by the language: lexical vs dynamic scoping
 
-> - Kotlin supports both lexical and dynamic scoping:
-> Example:
+Kotlin supports both lexical and dynamic scoping.
+
+*Example:*
 ```java
 run{
   val x = 1
@@ -239,17 +241,17 @@ Output:
 2 and y
 1
 ```
-> In the example above, the variable x is different in each scope while the variable y can still be accessed inside the inner scope like a dynamic variable.
+In the example above, the variable x is different in each scope while the variable y can still be accessed inside the inner scope like a dynamic variable.
 
-5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
+##### 5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
 
-> asdf
+asdf
 
-6. Its type system: static vs dynamic types
+##### 6. Its type system: static vs dynamic types
 
-> Kotline allows both
+Kotline allows both
 
-7. Strengths and weaknesses of the language
+##### 7. Strengths and weaknesses of the language
 
 > - Pros:
 >     - New Programming Language: Kotlin is fairly new, it has been growing in support and user in a really fast pace.
