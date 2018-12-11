@@ -164,7 +164,7 @@ fun fileReadWrite() {
 
 # Analysis of the language
 
-##### 1. The style of programming supported by the language: functional vs procedural programming
+#### 1. The style of programming supported by the language: functional vs procedural programming
 
 Kotlin supports both functional and procedual programming
 
@@ -213,7 +213,7 @@ Output:
 [(a, 2), (b, 1), (c, 3)]
 ```
 
-##### 2. The ability to perform meta-programming such as macros
+#### 2. The ability to perform meta-programming such as macros
 
 Since Kotlin has full JAVA support, it inherits JAVA's meta-programming capability.
 
@@ -251,11 +251,59 @@ java.lang.Object
 https://medium.com/@ruwanka/my-kotlin-diaries-part-2-metaprogramming-2120778d9811
 
 
-##### 3. Symbol resolution and its support for closure
+#### 3. Symbol resolution and its support for closure
 
-asdf
+Kotline supports similar Symbol resolution to Java.
 
-##### 4. Scoping rules supported by the language: lexical vs dynamic scoping
+Variables can be declared normally as Mutable and Immutable using the key words
+*var* and *val*.
+
+*Example 1:*
+
+```kotlin
+var x = 2 //Mutable
+val y = 3 //Immutable
+```
+
+##### Closure
+
+Kotlin also alows Global variables just like JAVA:
+
+```kotlin
+class MyApplication : Application() {
+    var gVar = "Global Variable"
+}
+```
+
+*In the Example 2:*
+
+```kotlin
+run{
+  val x = 1
+  val y = "y"
+
+  run{
+    val x = 2
+    println("$x and $y")
+  }
+
+  println(x)
+}
+```
+
+Each run function creates it's own scope. However, variable *y* is still accessible in it's corresponding sub scope while variable *x* was allowed to be reinitialized and override.
+
+*Example 3:*
+
+```kotlin
+fun sum(x: Int, y:Int):Int{
+    return = x + y
+}
+```
+
+In Example 3, *x* and *y* inside the function are only accessible inside the function. These variables can not be accessed outside of the function's scope.
+
+#### 4. Scoping rules supported by the language: lexical vs dynamic scoping
 
 Kotlin supports both lexical and dynamic scoping.
 
@@ -273,22 +321,75 @@ run{
 
   println(x)
 }
+```
 
+```kotlin
 Output:
 2 and y
 1
 ```
 In the example above, the variable x is different in each scope while the variable y can still be accessed inside the inner scope like a dynamic variable.
 
-##### 5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
 
-asdf
+#### 5. Functional programming constructs either as part of the language or supported by the standard library of the runtime.
 
-##### 6. Its type system: static vs dynamic types
+Kotlin Supports Functional Programming. A lot of them are imported by Default by the Kotlin Standard Library.
 
-Kotline allows both
+*Example 1:*
 
-##### 7. Strengths and weaknesses of the language
+```kotlin
+run{
+  val x = 1
+  val y = "y"
+
+  run{
+    val x = 2
+    println("$x and $y")
+  }
+
+  println(x)
+}
+```
+
+*Example 2:*
+
+```kotlin
+val someVal: Int = 1 + run{if(1 > 2) 3 else 5 }
+```
+
+*Constructing Higher order function, Example 3:*
+
+```kotlin
+fun highOrder(f: (Int) -> Int){
+
+}
+
+highOrder {it + 1}
+```
+
+
+#### 6. Its type system: static vs dynamic types
+
+Unlike Java, Kotlin does not have support for Static functions.
+
+Kotlin supports Mutable and Immutable variables.
+
+*Example 1:*
+
+```kotlin
+var x = 2 //Mutable
+val y = 3 //Immutable
+```
+
+Kolin supports constants similar to Java
+
+*Example 2:*
+
+```kotlin
+const val FOO = "foo"
+```
+
+#### 7. Strengths and weaknesses of the language
 
 > - Pros:
 >     - New Programming Language: Kotlin is fairly new, it has been growing in support and user in a really fast pace.
