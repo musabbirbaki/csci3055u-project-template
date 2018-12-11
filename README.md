@@ -252,7 +252,7 @@ asdf
 Kotlin supports both lexical and dynamic scoping.
 
 *Example:*
-```java
+```kotlin
 run{
   val x = 1
   val y = "y"
